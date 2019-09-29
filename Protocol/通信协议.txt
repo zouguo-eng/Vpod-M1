@@ -1,0 +1,45 @@
+通信主机：192.168.80.1
+通信端口：7888
+通信方式：TCP
+
+心跳包
+<?xml version="1.0"?>
+<CMD_REQ code="11" index="1"/>
+
+code 9
+版本号
+
+code 13
+版本号，硬盘信息，AP信息
+
+code 14
+路由信息
+
+code 4
+ENABLE_WIFI_ROUTE
+<?xml version="1.0"?><CMD_REQ code="4" index="39"><ENABLE_WIFI_ROUTE>1</ENABLE_WIFI_ROUTE></CMD_REQ>
+
+code 647
+连接终端
+<?xml version="1.0"?><CMD_REQ code="647" index="46"/>
+
+未知
+<?xml version="1.0"?><CMD_REQ code="26" index="52"/>
+
+code 2
+wifi设置
+<?xml version="1.0"?><CMD_REQ code="2" index="65"><SSID>LEDE_WLY</SSID><PASSWORD>w10086zY</PASSWORD><HIDDEN>0</HIDDEN></CMD_REQ>
+
+princesun:
+code 500
+重启或关机
+<?xml version="1.0"?><CMD_REQ code="500" index="230"><ACTION>0</ACTION></CMD_REQ>
+
+code 500
+恢复出厂设置
+<?xml version="1.0"?><CMD_REQ code="500" index="230"><ACTION>1</ACTION></CMD_REQ>
+
+princesun:
+code 10
+固件升级
+<?xml version="1.0"?><CMD_REQ code="10" index="62"/>

@@ -3,48 +3,89 @@
 通信方式：TCP
 
 心跳包
-<?xml version="1.0"?>
-<CMD_REQ code="11" index="1"/>
+<?xml version="1.0"?><CMD_REQ code="11" index="10"/>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="11" index="10" res="0" />
+
 
 code 2
 wifi设置
-<?xml version="1.0"?><CMD_REQ code="2" index="65"><SSID>LEDE_WLY</SSID><PASSWORD>w10086zY</PASSWORD><HIDDEN>0</HIDDEN></CMD_REQ>
+<?xml version="1.0"?><CMD_REQ code="2" index="65"><SSID>无线名称</SSID><PASSWORD>无线密码</PASSWORD><HIDDEN>0</HIDDEN></CMD_REQ>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="2" index="22" res="0" />
+
 
 code 4
-ENABLE_WIFI_ROUTE
-<?xml version="1.0"?><CMD_REQ code="4" index="39"><ENABLE_WIFI_ROUTE>1</ENABLE_WIFI_ROUTE></CMD_REQ>
+未知
+
 
 code 5
 扫描周围AP信息
+<?xml version="1.0"?><CMD_REQ code="5" index="45"/>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="5" index="45"
+res="0"><AP index="1"><SSID>Honor Play</SSID><SIGNAL>-77</SIGNAL><ENCRYPT_MODE>WPA2</ENCRYPT_MODE></AP><AP
+index="2"><SSID>周围的网络名称</SSID><SIGNAL>-84</SIGNAL><ENCRYPT_MODE>WPA2</ENCRYPT_MODE></AP></CMD_RES>
+
+
+code 6
+设置中继WiFi
+<?xml version="1.0"?><CMD_REQ code="6" index="49"><SSID>中继WiFi名称</SSID><PASSWORD>密码</PASSWORD></CMD_REQ>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="6" index="49" res="3" />
+
 
 code 7
-当前中继的WiFi SSID
+获取中继的WiFi SSID
+<?xml version="1.0"?><CMD_REQ code="7" index="44"/>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="7" index="44" res="0"><AP index="1" ssid="中继WIFI名称" /></CMD_RES>
+
 
 code 9
 版本号
+<?xml version="1.0"?><CMD_REQ code="9" index="12"/>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="9" index="12" res="0"><CUR_VER>2.0.2</CUR_VER><FW>2.0.2</FW><HW>1.0</HW><NAME>vWifi_M1</NAME></CMD_RES>
 
-code 10
+
+code 10（不可用）
 固件升级
 <?xml version="1.0"?><CMD_REQ code="10" index="62"/>
 
+
 code 13
 版本号，硬盘信息，AP信息
+<?xml version="1.0"?><CMD_REQ code="13" index="40"/>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="13" index="40"
+res="0"><FW>2.0.2</FW><HW>1.0</HW><NAME>vWifi_M1</NAME><DISK_INFO><PARTITION
+index="sdb1" fstype="FAT32" total_size="3.7G" free_size="3.7G" /></DISK_INFO><MAC_INFO><ETH0_MAC>网卡MAC</ETH0_MAC><WAN0_MAC>WAN0 MAC</WAN0_MAC></MAC_INFO><AP_INFO><SSID>Holl_vWifi_f88f</SSID><ENCRYPTION>psk2</ENCRYPTION></AP_INFO></CMD_RES>
+
 
 code 14
 路由信息
+<?xml version="1.0"?><CMD_REQ code="14" index="39"/>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="14" index="39"
+res="0"><ROUTE_INFO mode="sta"><IP></IP><MASK></MASK><GATEWAY></GATEWAY><DNS></DNS></ROUTE_INFO><WIFI_REPEATER><IS_ENABLE>1</IS_ENABLE><SSID> </SSID></WIFI_REPEATER></CMD_RES>
+
 
 code 647
 连接终端
 <?xml version="1.0"?><CMD_REQ code="647" index="46"/>
 
+
+code 26
 未知
 <?xml version="1.0"?><CMD_REQ code="26" index="52"/>
+
 
 code 500
 重启或关机
 <?xml version="1.0"?><CMD_REQ code="500" index="230"><ACTION>0</ACTION></CMD_REQ>
 
+
 code 500
 恢复出厂设置
 <?xml version="1.0"?><CMD_REQ code="500" index="230"><ACTION>1</ACTION></CMD_REQ>
+
+
+code 647
+手机访问权限
+<?xml version="1.0"?><CMD_REQ code="647" index="36"/>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="647" index="36"
+res="0"><DEVICE_NUM>1</DEVICE_NUM><DEVICE><NAME>MI5X-damishouji</NAME><IP>192.168.80.197</IP><MAC>38:e6:0a:94:64:8f</MAC><ACCESS_INTERNET>ENABLE</ACCESS_INTERNET><ACCESS_SHAREDISK>ENABLE</ACCESS_SHAREDISK><BIND_MAC>UNBIND</BIND_MAC></DEVICE></CMD_RES>
 

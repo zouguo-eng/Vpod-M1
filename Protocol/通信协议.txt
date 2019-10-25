@@ -62,6 +62,15 @@ code 14
 <?xml version="1.0" encoding="utf-8"?><CMD_RES code="14" index="39"
 res="0"><ROUTE_INFO mode="sta"><IP></IP><MASK></MASK><GATEWAY></GATEWAY><DNS></DNS></ROUTE_INFO><WIFI_REPEATER><IS_ENABLE>1</IS_ENABLE><SSID> </SSID></WIFI_REPEATER></CMD_RES>
 
+code 16
+创建上传目录
+<?xml version="1.0"?><CMD_REQ code="16" index="39"/>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="16" index="39".res="0"><VIDEO>/mnt/sdb1/upload/video</VIDEO><MUSIC>/mnt/sdb1/upload/music</MUSIC><PHOTO>/mnt/sdb1/upload/photo</PHOTO><DOC>/mnt/sdb1/upload/doc</DOC></CMD_RES>
+
+code 17
+未知
+<?xml version="1.0"?><CMD_REQ code="17" index="12"/>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="17" index="12".res="0"><COUNT>14</COUNT><MSG_NO>5</MSG_NO><DEV_INFO><NAME>sdb1</NAME><UUID>F2AB-F882</UUID></DEV_INFO></CMD_RES>
 
 code 647
 连接终端

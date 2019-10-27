@@ -33,7 +33,7 @@ res="0"><AP index="1"><SSID>Honor Play</SSID><SIGNAL>-77</SIGNAL><ENCRYPT_MODE>W
 index="2"><SSID>周围的网络名称</SSID><SIGNAL>-84</SIGNAL><ENCRYPT_MODE>WPA2</ENCRYPT_MODE></AP></CMD_RES>
 
 
-code 6
+code 6(异常)
 设置中继WiFi
 <?xml version="1.0"?><CMD_REQ code="6" index="49"><SSID>中继WiFi名称</SSID><PASSWORD>密码</PASSWORD></CMD_REQ>
 <?xml version="1.0" encoding="utf-8"?><CMD_RES code="6" index="49" res="3" />

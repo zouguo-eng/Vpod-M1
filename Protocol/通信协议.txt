@@ -2,6 +2,13 @@
 通信端口：7888
 通信方式：TCP
 
+res="0"
+响应成功
+
+res="3"
+响应失败
+
+
 心跳包
 <?xml version="1.0"?><CMD_REQ code="11" index="10"/>
 <?xml version="1.0" encoding="utf-8"?><CMD_RES code="11" index="10" res="0" />
@@ -13,8 +20,9 @@ wifi设置
 <?xml version="1.0" encoding="utf-8"?><CMD_RES code="2" index="22" res="0" />
 
 
-code 4
-未知
+code 4（异常）
+wifi使能
+<?xml version="1.0"?><CMD_REQ code="4" index="45"/><ENABLE_WIFI_ROUTER>1</ENABLE_WIFI_ROUTER></CMD_REQ>
 
 
 code 5
@@ -58,7 +66,12 @@ index="sdb1" fstype="FAT32" total_size="3.7G" free_size="3.7G" /></DISK_INFO><MA
 
 code 14
 路由信息
+请求1-
 <?xml version="1.0"?><CMD_REQ code="14" index="39"/>
+
+响应1-WIFI使能与否
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="14" index="39".res="0"><WIFI_ROUTE_ENABLE>0</WIFI_ROUTE_ENABLE></CMD_RES>
+响应2-WIFI信息
 <?xml version="1.0" encoding="utf-8"?><CMD_RES code="14" index="39"
 res="0"><ROUTE_INFO mode="sta"><IP></IP><MASK></MASK><GATEWAY></GATEWAY><DNS></DNS></ROUTE_INFO><WIFI_REPEATER><IS_ENABLE>1</IS_ENABLE><SSID> </SSID></WIFI_REPEATER></CMD_RES>
 

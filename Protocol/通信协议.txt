@@ -16,7 +16,7 @@ res="3"
 
 code 2
 wifi设置
-<?xml version="1.0"?><CMD_REQ code="2" index="65"><SSID>无线名称</SSID><PASSWORD>无线密码</PASSWORD><HIDDEN>0</HIDDEN></CMD_REQ>
+<?xml version="1.0"?><CMD_REQ code="2" index="65"><SSID>无线名称</SSID><PASSWORD>{代表无线密码}</PASSWORD><HIDDEN>0</HIDDEN></CMD_REQ>
 <?xml version="1.0" encoding="utf-8"?><CMD_RES code="2" index="22" res="0" />
 
 
@@ -30,7 +30,7 @@ code 5
 <?xml version="1.0"?><CMD_REQ code="5" index="45"/>
 <?xml version="1.0" encoding="utf-8"?><CMD_RES code="5" index="45"
 res="0"><AP index="1"><SSID>Honor Play</SSID><SIGNAL>-77</SIGNAL><ENCRYPT_MODE>WPA2</ENCRYPT_MODE></AP><AP
-index="2"><SSID>周围的网络名称</SSID><SIGNAL>-84</SIGNAL><ENCRYPT_MODE>WPA2</ENCRYPT_MODE></AP></CMD_RES>
+index="2"><SSID>{代表周围的网络名称}</SSID><SIGNAL>-84</SIGNAL><ENCRYPT_MODE>WPA2</ENCRYPT_MODE></AP></CMD_RES>
 
 
 code 6(异常)
@@ -88,7 +88,34 @@ code 17
 code 647
 连接终端
 <?xml version="1.0"?><CMD_REQ code="647" index="46"/>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="647" index="34"
+res="0"><DEVICE_NUM>1</DEVICE_NUM><DEVICE><NAME>MI5X-damishouji</NAME><IP>{代表设备IP}</IP><MAC>{代表设备MAC}</MAC><ACCESS_INTERNET>ENABLE</ACCESS_INTERNET><ACCESS_SHAREDISK>ENABLE</ACCESS_SHAREDISK><BIND_MAC>UNBIND</BIND_MAC></DEVICE></CMD_RES>
 
+code 648
+接入设备-绑定设备
+<?xml version="1.0"?>
+<CMD_REQ code="648" index="36"><MAC>{代表设备MAC}</MAC><ACTION>BIND</ACTION></CMD_REQ>
+<?xml version="1.0" encoding="utf-8"?><CMD_RES code="648" index="36"
+res="0" />
+接入设备-解绑设备
+<?xml version="1.0"?>
+<CMD_REQ code="648" index="38"><MAC>{代表设备MAC}</MAC><ACTION>UNBIND</ACTION></CMD_REQ>
+接入设备-允许访问共享盘
+<?xml version="1.0"?>
+<CMD_REQ code="648" index="39"><MAC>{代表设备MAC}</MAC><ACTION>SHAREDISK_ENABLE</ACTION></CMD_REQ>
+接入设备-禁止访问共享盘
+<?xml version="1.0"?>
+<CMD_REQ code="648" index="39"><MAC>{代表设备MAC}</MAC><ACTION>SHAREDISK_DISABLE</ACTION></CMD_REQ>
+接入设备-允许访问互联网
+<?xml version="1.0"?>
+<CMD_REQ code="648" index="43"><MAC>{代表设备MAC}</MAC><ACTION>INTERNET_ENABLE</ACTION></CMD_REQ>
+接入设备-禁止访问互联网
+<?xml version="1.0"?>
+<CMD_REQ code="648" index="42"><MAC>{代表设备MAC}</MAC><ACTION>INTERNET_DISABLE</ACTION></CMD_REQ>
+
+
+code 650
+原APP作为登录校验使用
 
 code 26
 未知
@@ -103,11 +130,4 @@ code 500
 code 500
 恢复出厂设置
 <?xml version="1.0"?><CMD_REQ code="500" index="230"><ACTION>1</ACTION></CMD_REQ>
-
-
-code 647
-手机访问权限
-<?xml version="1.0"?><CMD_REQ code="647" index="36"/>
-<?xml version="1.0" encoding="utf-8"?><CMD_RES code="647" index="36"
-res="0"><DEVICE_NUM>1</DEVICE_NUM><DEVICE><NAME>MI5X-damishouji</NAME><IP>192.168.80.197</IP><MAC>38:e6:0a:94:64:8f</MAC><ACCESS_INTERNET>ENABLE</ACCESS_INTERNET><ACCESS_SHAREDISK>ENABLE</ACCESS_SHAREDISK><BIND_MAC>UNBIND</BIND_MAC></DEVICE></CMD_RES>
 
